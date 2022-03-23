@@ -1,0 +1,133 @@
+﻿<Application x:Class="Skill_Dashboard.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+
+        <Style x:Key="menuButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="#787C86" />
+            <Setter Property="Width" Value="45" />
+            <Setter Property="Height" Value="45" />
+            <Setter Property="Margin" Value="0 15 0 0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="50">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#787C86" />
+                    <Setter Property="Foreground" Value="#ffffff" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+        <Style x:Key="menuButtonTop" TargetType="Button" BasedOn="{StaticResource menuButton}">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Margin" Value="0 20 0 0" />
+            <Setter Property="Width" Value="45" />
+            <Setter Property="Height" Value="45" />
+        </Style>
+
+
+        <Style x:Key="menuButtonIcon" TargetType="fa:ImageAwesome">
+            <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}" />
+            <Setter Property="Width" Value="18" />
+            <Setter Property="Height" Value="18" />
+        </Style>
+
+
+        <Style x:Key="infoTitle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#ffffff" />
+            <Setter Property="FontSize" Value="28" />
+            <Setter Property="TextAlignment" Value="Center" />
+        </Style>
+
+
+        <Style x:Key="infoText" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#979CA7" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextAlignment" Value="Center" />
+            <Setter Property="Margin" Value="0 5 0 5" />
+        </Style>
+
+
+        <Style x:Key="pinkButton" TargetType="Button">
+            <Setter Property="Background" Value="#FF869E" />
+            <Setter Property="Foreground" Value="#ffffff" />
+            <Setter Property="Width" Value="230" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Margin" Value="0 -25 0 0" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Grid.Row" Value="1" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="25">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#fc6583" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        
+        <Style x:Key="title" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#2F394E" />
+            <Setter Property="FontSize" Value="22" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+        </Style>
+
+
+        <Style x:Key="desc" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#B1B1B1" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Margin" Value="0 5 0 0" />
+        </Style>
+
+
+        <Style x:Key="whiteButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="#9CA2B3" />
+            <Setter Property="Height" Value="40" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="3">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#dfdfdf" />
+                    <Setter Property="Foreground" Value="#666666" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+    </Application.Resources>
+</Application>
